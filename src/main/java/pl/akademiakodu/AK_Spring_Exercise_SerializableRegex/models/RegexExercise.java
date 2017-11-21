@@ -13,6 +13,7 @@ public class RegexExercise {
     }
 
     public boolean isEmailAddress(String potentialEmail){
+        System.out.println(Pattern.matches("^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$", "Maresowa@gmail.com"));
         return Pattern.matches("^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$", potentialEmail);
     }
 

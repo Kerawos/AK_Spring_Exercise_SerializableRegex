@@ -20,6 +20,7 @@ public class RegexExerciseTest {
 
     @Test public void emailValidationText() throws Exception {
         assertTrue(regexExercise.isEmailAddress("example@gmail.com"));
+        assertTrue(regexExercise.isEmailAddress("Maresowa@gmail.com"));
         assertTrue(regexExercise.isEmailAddress("student@university.edu.pl"));
         assertTrue(regexExercise.isEmailAddress("example.example1969@com.com"));
         assertTrue(regexExercise.isEmailAddress("11112222kitty.kit@kitty.edu.com"));

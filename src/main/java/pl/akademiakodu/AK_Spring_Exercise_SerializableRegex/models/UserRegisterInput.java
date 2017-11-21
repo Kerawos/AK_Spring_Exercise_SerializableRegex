@@ -5,7 +5,7 @@ public class UserRegisterInput {
     private String surName;
     private String email;
     private String street;
-    private String streetpassword;
+    private String password;
 
     public String getName() {
         return name;
@@ -39,11 +39,11 @@ public class UserRegisterInput {
         this.street = street;
     }
 
-    public String getStreetpassword() {
-        return streetpassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setStreetpassword(String streetpassword) {
-        this.streetpassword = streetpassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
