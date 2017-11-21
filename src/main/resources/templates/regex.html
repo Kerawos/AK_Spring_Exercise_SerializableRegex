@@ -8,12 +8,6 @@
     <img src="img/SerialRegexNav.png" style="max-width: 100%">
     <hr>
     <font color="#4D4D4D" face="Arial" size="5">
-
-        private String name;
-        private String surName;
-        private String email;
-        private String street;
-        private String password;
         <form method="post" th:action="@{/reg}" th:object="${userRegisterInput}" style="margin-left: 10%">
             <p th:if="${infoName}!=null" th:text="${infoName}"></p>
             <input type="text" th:field="*{name}" placeholder="enter name"><br>

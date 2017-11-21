@@ -6,12 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.RegexExercise;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.SerializationExercise;
 import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.UserRegisterInput;
+
+import java.io.File;
 
 @Controller
 public class RegexController {
 
     private RegexExercise regexExercise = new RegexExercise();
+    private File file = new File("fileTest.txt");
+    private SerializationExercise serializationExercise = new SerializationExercise();
 
     @GetMapping("/reg") public String regexGet(Model model){
         model.addAttribute("userRegisterInput", new UserRegisterInput());
@@ -35,7 +40,10 @@ public class RegexController {
             model.addAttribute("infoPassword", "Password have to contain 8 characters, at least one Capital letter, " +
                     "special sign and digit");
         } else {
-            return "regComplete";
+            serializationExercise.saveObject(file, userRegisterInput);
+            model.addAttribute("message", "REGISTRATION SUCCESSFUL! LAST USER:");
+            model.addAttribute("loadedLastObject", serializationExercise.loadObject(file).toString());
+            return "serial";
         }
         return "regex";
     }
