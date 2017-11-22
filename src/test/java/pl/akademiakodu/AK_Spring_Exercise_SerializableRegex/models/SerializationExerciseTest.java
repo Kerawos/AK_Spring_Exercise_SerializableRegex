@@ -21,7 +21,7 @@ public class SerializationExerciseTest {
     }
 
     @Test public void saveTest() throws Exception {
-        File file = new File("testFile.txt");
+        File file = new File("fileTest.txt");
         UserRegisterInput user1 = new UserRegisterInput("Jan", "Kowalski", "jankowal@mail.com", "Centrum 2", "SecretPassword123!!!");
         serializationExercise.saveObject(file, user1);
         assertNotEquals(serializationExercise.loadObject(file).toString(), user1.toString());
