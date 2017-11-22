@@ -19,3 +19,15 @@ for validation tests, there you find more instructions.
 
 *-*-*-*-*-*-*-*
 
+[2]. 'Serialization exercise':
+
+second part of the exercise is to implement two methods:
+
+- saveObject - save object to file - write;
+
+- loadObject - load object from file - read;
+
+*-*-*-*-*-*-*-*
+
+Good luck!
+
