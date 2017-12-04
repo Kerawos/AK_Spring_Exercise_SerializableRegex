@@ -1,4 +1,4 @@
-package pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models;
+package pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.services;
 
 import java.util.regex.Pattern;
 
