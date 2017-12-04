@@ -2,13 +2,23 @@ package pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models;
 
 import java.io.Serializable;
 
+/**
+ * Class for holding user input as object. Can be also serializable.
+ */
 public class UserRegisterInput implements Serializable{
+
+    /**
+     * Variables declarations
+     */
     private String name;
     private String surName;
     private String email;
     private String street;
     private transient String password;
 
+    /**
+     * constructors
+     */
     public UserRegisterInput() {
     }
 
@@ -20,6 +30,9 @@ public class UserRegisterInput implements Serializable{
         this.password = password;
     }
 
+    /**
+     * Getters and setters section
+     */
     public String getName() {
         return name;
     }
